@@ -33,7 +33,7 @@ class Chart extends StatelessWidget {
   }
 
   double get totalSpendings {
-    return groupTransVal.fold(0.0, (sum, item) {
+    return groupTransVal.fold(0, (sum, item) {
       return sum + (item['amount'] as double);
     });
   }

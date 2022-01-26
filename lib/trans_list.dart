@@ -21,7 +21,7 @@ class Transactionlist extends StatelessWidget {
             ? LayoutBuilder(
                 builder: (ctx, constraints) {
                   return Column(
-                    children: <Widget>[
+                    children: [
                       Text(
                         'No transactions added yet!',
                         style: TextStyle(

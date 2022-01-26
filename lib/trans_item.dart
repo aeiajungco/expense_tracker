@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-
 import 'package:intl/intl.dart';
 import 'trans_var.dart';
 
@@ -36,7 +34,6 @@ class TransactionItems extends StatelessWidget {
         ),
         subtitle: Text(DateFormat.yMMMd().format(trans.date)),
         trailing: IconButton(
-                // for adding delete button to the side of the list
                 icon: Icon(Icons.delete),
                 onPressed: () => deleteTransaction(trans.id),
                 color: Colors.red,

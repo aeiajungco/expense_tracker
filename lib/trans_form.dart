@@ -33,11 +33,11 @@ class _TransactionFormState extends State<TransactionForm> {
     Navigator.of(context).pop();
   }
 
-  void _presentDate() {
+  void presentDate() {
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2021),
+      firstDate: DateTime(2020),
       lastDate: DateTime.now(),
     ).then((chosenDate) {
       if (chosenDate == null) {
@@ -84,7 +84,7 @@ class _TransactionFormState extends State<TransactionForm> {
                   children: [
                     Expanded(
                       child: Text(
-                        selectedDate == DateTime(2018)
+                        selectedDate == DateTime(2020)
                             ? 'No Date Chosen'
                             : 'Picked Date: ${DateFormat.yMd().format(selectedDate)}',
                       ),
@@ -93,11 +93,12 @@ class _TransactionFormState extends State<TransactionForm> {
                       width: 5,
                     ),
                     TextButton(
-                      onPressed: _presentDate,
+                      onPressed: presentDate,
                       child: Text(
                         'Choose date',
                         style: TextStyle(
                           color: Colors.purple,
+                          fontWeight: FontWeight.w600
                         ),
                       ),
                     )
@@ -118,7 +119,7 @@ class _TransactionFormState extends State<TransactionForm> {
                     ),
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.purple,
-                      maximumSize: Size(115, 50),
+                      maximumSize: Size(125, 55),
                     ),
                   ),
                 ],

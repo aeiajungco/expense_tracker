@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
         'Expense Tracker',
         style: TextStyle(fontFamily: 'OpenSans'),
       ),
-      actions: <Widget>[
+      actions: [
         IconButton(
             onPressed: () => fillTransaction(context), icon: Icon(Icons.add)),
       ],
